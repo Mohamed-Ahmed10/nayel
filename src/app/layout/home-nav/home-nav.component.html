@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg p-4">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+                </li>
+                @for (item of navItems; track $index) {
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/', item.toLowerCase()]">{{item}}</a>
+
+                </li>
+                }
+            </ul>
+            <div class="d-flex gap-4">
+                <div class="user">
+                    <img src="icons/user_light.png" class="me-2" alt="User icon">
+                    <img src="icons/arrow_down_light.png" alt="arrow icon">
+                </div>
+                <img src="icons/cart_light.png" alt="Cart icon">
+            </div>
+        </div>
+        <img src="logo.png" class="logo" alt="Icon">
+    </div>
+</nav>
