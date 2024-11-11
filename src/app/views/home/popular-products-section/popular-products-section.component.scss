@@ -1,0 +1,20 @@
+.popular_products {
+    font-family: "Oxygen", sans-serif;
+    p {
+        width: 60%;
+    }
+    .view_all_btn {
+        background-color: #683c6e;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .view_all_btn:hover {
+        background-color: #75357c;
+    }
+}

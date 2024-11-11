@@ -1,17 +1,26 @@
 import { Component } from '@angular/core';
-import { Product } from '../../../helpers/interfaces';
+import type { Product } from '../../../helpers/interfaces';
+
+
 
 @Component({
-  selector: 'app-sale-section',
+  selector: 'app-popular-products-section',
   standalone: true,
   imports: [],
-  templateUrl: './sale-section.component.html',
-  styleUrl: './sale-section.component.scss'
+  templateUrl: './popular-products-section.component.html',
+  styleUrl: './popular-products-section.component.scss'
 })
-export class SaleSectionComponent {
+export class PopularProductsSectionComponent {
   products: Product[] = [
     {
     image: '1',
+    saleAmount: 13,
+    name: 'Long Sleeve Stain Abaya',
+    priceBefore: 230,
+    priceAfter: 200
+  },
+  {
+    image: '2',
     saleAmount: 13,
     name: 'Long Sleeve Stain Abaya',
     priceBefore: 230,
@@ -26,13 +35,6 @@ export class SaleSectionComponent {
   },
   {
     image: '4',
-    saleAmount: 13,
-    name: 'Long Sleeve Stain Abaya',
-    priceBefore: 230,
-    priceAfter: 200
-  },
-  {
-    image: '2',
     saleAmount: 13,
     name: 'Long Sleeve Stain Abaya',
     priceBefore: 230,

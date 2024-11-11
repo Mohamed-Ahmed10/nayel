@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&display=swap");
 
 :root {
     --main_color: #463452;
@@ -7,4 +7,25 @@
 body {
     font-family: "Exo", sans-serif !important;
     height: 50000px;
+}
+// home cards styles
+
+.product_image {
+    width: 100%;
+}
+.cart_icon {
+    right: 5%;
+    top: 4%;
+}
+.sale_amount {
+    position: absolute;
+    bottom: 11%;
+    left: 10%;
+    width: 50%;
+}
+p {
+    width: 40%;
+}
+.add {
+    cursor: pointer;
 }
