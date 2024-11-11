@@ -1,0 +1,22 @@
+.sale {
+    font-family: "Oxygen", sans-serif;
+    .product_image {
+        width: 100%;
+    }
+    .cart_icon {
+        right: 5%;
+        top: 4%;
+    }
+    .sale_amount {
+        position: absolute;
+        bottom: 11%;
+        left: 10%;
+        width: 50%;
+    }
+    p {
+        width: 40%;
+    }
+    .add {
+        cursor: pointer;
+    }
+}

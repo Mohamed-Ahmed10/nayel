@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { HomeNavComponent } from "../../layout/home-nav/home-nav.component";
+import { IntroSectionComponent } from './intro-section/intro-section.component';
+import { SaleSectionComponent } from "./sale-section/sale-section.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HomeNavComponent,HomeNavComponent],
+  imports: [IntroSectionComponent, SaleSectionComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
