@@ -1,6 +1,6 @@
 .intro {
     background:
-        url(../../../../../public/logo.png) 90% 95% no-repeat ,
+        url(../../../../../public/logo.png) 90% 95% no-repeat,
         url(../../../../../public/hero_bg.jpeg) center/cover;
     height: 100vh;
     color: #fff;
@@ -24,26 +24,26 @@
         margin: 70px auto;
         border: 1px solid;
         backdrop-filter: blur(10px);
-    }
 
-    .search-bar input {
-        border: none;
-        background: none;
-        outline: none;
-        color: white;
-        flex-grow: 1;
-
-        &::placeholder {
+        input {
+            border: none;
+            background: none;
+            outline: none;
             color: white;
-        }
-    }
+            flex-grow: 1;
 
-    .search-bar svg {
-        margin-left: 10px;
-        cursor: pointer;
-        border-radius: 50%;
-        background-color: #251f3d;
-        padding: 8px;
-        width: 40px;
+            &::placeholder {
+                color: white;
+            }
+        }
+
+        svg {
+            margin-left: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            background-color: #251f3d;
+            padding: 8px;
+            width: 40px;
+        }
     }
 }
