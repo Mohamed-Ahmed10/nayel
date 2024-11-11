@@ -1,0 +1,29 @@
+.table_container {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #dedfe1;
+}
+.table {
+    th {
+        padding: 15px;
+        background: #a6a6a6;
+        color: #fff;
+        font-weight: normal;
+    }
+
+    .dark {
+        color: #3d3d3d;
+    }
+    .light {
+        color: #949494;
+    }
+}
+.table_footer {
+    width: 100%;
+    padding: 15px 0px 15px 0px;
+    gap: 10px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+}
