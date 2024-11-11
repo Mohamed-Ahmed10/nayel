@@ -1,0 +1,120 @@
+.products {
+    font-family: "Oxygen", sans-serif;
+
+    .filters {
+        h2 {
+            margin-bottom: 10px;
+            border-left: 3px solid #2d2d2d;
+            padding-inline-start: 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .filter-panel {
+            .dropdown {
+                width: 100%;
+                padding: 5px;
+                border: none;
+                outline: none;
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                background-image: url(../../../../public/icons/arrow_down2.png), linear-gradient(#fff, #fff);
+                background-repeat: no-repeat;
+                background-position: 95% center;
+
+                &.active {
+                    background-image: url(../../../../public/icons/arrow_down2.png), linear-gradient(#cfc5d1, #cfc5d1);
+                }
+            }
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+
+        label {
+            margin: 5px 20px;
+            input[type="checkbox"] {
+                accent-color: #3d3d3d;
+            }
+        }
+    }
+
+    .search-bar {
+        border: 1px solid #00000026;
+        border-radius: 45px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        margin: 25px auto;
+
+        input {
+            border: none;
+            background: none;
+            outline: none;
+            flex-grow: 1;
+
+            &::placeholder {
+                color: #5f5f5f;
+            }
+        }
+
+        .image_container {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #666666;
+            padding: 6px;
+            cursor: pointer;
+            text-align: center;
+
+            img {
+                width: 20px;
+            }
+        }
+    }
+    p {
+        color: #949494;
+    }
+
+    .item-count {
+        color: #414141;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .separator {
+        background: #dfdfdf;
+        width: 40%;
+        height: 1px;
+        margin: 40px auto;
+
+        div {
+            background: #282828;
+            width: 70%;
+            height: 1px;
+        }
+    }
+
+    .load-more {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .load-more-btn {
+        background-color: #282828;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        padding: 16px 24px 16px 24px;
+        opacity: 0px;
+    }
+
+    .load-more-btn:hover {
+        background-color: #070707;
+    }
+}

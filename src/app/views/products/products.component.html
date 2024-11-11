@@ -1,1 +1,91 @@
-<p>products works!</p>
+<app-nav />
+<div class="container mt-5 products">
+    <div class="row">
+        <div class="col-3 filters">
+            <div class="filter-panel card p-3 mb-3">
+                <h2>Categories</h2>
+                <select class="dropdown active my-1">
+                    <option value="Fabric">Fabric</option>
+                    <option value="Makhawer">Makhawer</option>
+                    <option value="Abaya">Abaya</option>
+                    <option value="Designers">Designers</option>
+                    <option value="International Designs">International Designs</option>
+                </select>
+                <select class="dropdown my-1">
+                    <option value="Makhawer">Makhawer</option>
+                    <option value="Fabric">Fabric</option>
+                    <option value="Abaya">Abaya</option>
+                    <option value="Designers">Designers</option>
+                    <option value="International Designs">International Designs</option>
+                </select>
+                <select class="dropdown my-1">
+                    <option value="Abaya">Abaya</option>
+                    <option value="Fabric">Fabric</option>
+                    <option value="Makhawer">Makhawer</option>
+                    <option value="Designers">Designers</option>
+                    <option value="International Designs">International Designs</option>
+                </select>
+                <select class="dropdown my-1">
+                    <option value="Designers">Designers</option>
+                    <option value="Fabric">Fabric</option>
+                    <option value="Makhawer">Makhawer</option>
+                    <option value="Abaya">Abaya</option>
+                    <option value="International Designs">International Designs</option>
+                </select>
+            </div>
+            <div class="card p-3 my-3">
+                <h2>Price Range</h2>
+                <label>
+                    <input type="checkbox" checked>
+                    $20.00 - $50.00
+                </label>
+                <label>
+                    <input type="checkbox">
+                    $20.00 - $50.00
+                </label>
+                <label>
+                    <input type="checkbox">
+                    $20.00 - $50.00
+                </label>
+                <label>
+                    <input type="checkbox">
+                    $20.00 - $50.00
+                </label>
+            </div>
+        </div>
+        <div class="col-9">
+            <h2>Our Collection Of Products</h2>
+            <div class="search-bar">
+                <input type="text" placeholder="Search An Item">
+                <div class="image_container">
+                    <img src="icons/search.png" alt="icon">
+                </div>
+            </div>
+            <h5 class="fw-bold">Showing 1–12 of 24 item(s)</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
+            <div class="row">
+                @for (product of products; track $index) {
+                <div class="col-md-4 col-12">
+                    <a routerLink="/single_product">
+                        <app-product-card [product]="product" />
+                    </a>
+                </div>
+                }
+                <div class="col-12">
+                    <div class="load-more">
+                        <p class="item-count">Showing 1-12 of 24 item(s)</p>
+                        <div class="separator">
+                            <div></div>
+                        </div>
+                        <button class="load-more-btn">Load More
+                            <img src="icons/chevron_right_light.png" alt="icon">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

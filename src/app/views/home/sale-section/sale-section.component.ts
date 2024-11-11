@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Product } from '../../../helpers/interfaces';
+import { ProductCardComponent } from "../../../shared/product-card/product-card.component";
 
 @Component({
   selector: 'app-sale-section',
   standalone: true,
-  imports: [],
+  imports: [ProductCardComponent],
   templateUrl: './sale-section.component.html',
   styleUrl: './sale-section.component.scss'
 })

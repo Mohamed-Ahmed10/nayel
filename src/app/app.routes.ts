@@ -1,24 +1,22 @@
 import { CanMatchFn, RedirectCommand, Router, Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { NotFoundComponent } from './views/not-found/not-found.component';
-import { ProductsComponent } from './views/products/products.component';
-import { SingleProductComponent } from './views/single-product/single-product.component';
 
 
 export const routes: Routes = [
     {
-        path: '', 
+        path: '',
         component: HomeComponent,
         title: 'Home page',
     },
     {
-        path: 'products', 
-        component: ProductsComponent,
+        path: 'products',
+        loadComponent: () => import('./views/products/products.component').then(mod => mod.ProductsComponent),
         title: 'Products',
     },
     {
-        path: 'single_product', 
-        component: SingleProductComponent,
+        path: 'single_product',
+        loadComponent: () => import('./views/single-product/single-product.component').then(mod => mod.SingleProductComponent),
         title: 'Single product',
     },
     {

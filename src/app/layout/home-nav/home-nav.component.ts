@@ -9,5 +9,11 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home-nav.component.scss'
 })
 export class HomeNavComponent {
-  navItems: string[] = ['Fabric', 'Makhawer', 'Abaya', 'Designers', 'International Designs']
+  navItems = [
+    { name: 'Fabric', link: 'products' },
+    { name: 'Makhawer', link: 'makhawer' },
+    { name: 'Abaya', link: 'abaya' },
+    { name: 'Designers', link: 'designers' },
+    { name: 'International Designs', link: 'international_designs' }
+  ];
 }

@@ -1,0 +1,29 @@
+.product_image {
+    width: 100%;
+}
+.cart_icon {
+    right: 5%;
+    top: 4%;
+}
+.sale_amount {
+    position: absolute;
+    bottom: 11%;
+    left: 10%;
+    width: 50%;
+}
+.section_title p {
+    width: 40%;
+}
+.add {
+    cursor: pointer;
+}
+.discount {
+    position: absolute;
+    background: #3d3d3d;
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px 6px 12px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 12px;
+}

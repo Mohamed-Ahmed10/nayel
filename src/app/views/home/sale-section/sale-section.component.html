@@ -3,32 +3,15 @@
         <div class="d-flex justify-content-between section_title">
             <h2 class="fw-bold">ON-SALE Products</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla nunc in molestie feugiat. Nunc
-                auctor consectetur elit, quis pulvina.</p>
+                auctor consectetur elit, quis pulvina.
+            </p>
         </div>
         <div class="row">
             @for (product of products; track $index) {
-                <div class="col-md-3 col-12">
-                    <div class="product">
-                        <div class="position-relative">
-                            <img [src]="'homepage/products/'+product.image + '.png'" class="product_image" alt="product image">
-                            <div class="cart_icon position-absolute">
-                                <img src="icons/cart2.png" alt="Icon">
-                            </div>
-                            <button class="sale_amount btn btn-danger rounded-4">Sale {{product.saleAmount}}%</button>
-                        </div>
-                        <div class="product_info">
-                            <h4 class="fw-light mt-3">{{product.name}} ....</h4>
-                            <div class="d-flex justify-content-between">
-                                <div class="price">
-                                    <del class="me-2">${{product.priceBefore}}</del>
-                                    <span class="fw-bold">${{product.priceAfter}}</span>
-                                </div>
-                                <img src="icons/plus.png" alt="icon" class="add">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                }
+            <div class="col-md-3 col-12">
+                <app-product-card [product]="product" />
+            </div>
+            }
         </div>
     </div>
 </div>

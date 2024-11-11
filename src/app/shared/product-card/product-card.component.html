@@ -1,0 +1,27 @@
+<div class="product my-3">
+    <div class="position-relative">
+        <img [src]="'homepage/products/'+product.image + '.png'" class="product_image" alt="product image">
+        @if (product.saleAmount === undefined || product.saleAmount > 0 ) {
+        <div class="cart_icon position-absolute">
+            <img src="icons/cart2.png" alt="Icon">
+        </div>
+        }
+        @if (product.saleAmount !== undefined && product.saleAmount > 0) {
+        <button class="sale_amount btn btn-danger rounded-4">Sale {{product.saleAmount}}%</button>
+        }
+        @else if (product.saleAmount !== undefined && product.saleAmount < 0 ) 
+        { <div class="discount">{{product.saleAmount}}%</div>
+    }
+
+</div>
+<div class="product_info">
+    <h4 class="fw-light mt-3">{{product.name}} ....</h4>
+    <div class="d-flex justify-content-between">
+        <div class="price">
+            <del class="me-2">${{product.priceBefore}}</del>
+            <span class="fw-bold">${{product.priceAfter}}</span>
+        </div>
+        <img src="icons/plus.png" alt="icon" class="add">
+    </div>
+</div>
+</div>

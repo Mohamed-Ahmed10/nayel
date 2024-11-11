@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink,RouterLinkActive],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss'
 })
 export class NavComponent {
-  navItems: string[] = ['Fabric', 'Makhawer', 'Abaya', 'Designers', 'International Designs']
+  navItems = [
+    { name: 'Fabric', link: 'fabric' },
+    { name: 'Makhawer', link: 'products' },
+    { name: 'Abaya', link: 'abaya' },
+    { name: 'Designers', link: 'designers' },
+    { name: 'International Designs', link: 'international_designs' }
+  ];
 }

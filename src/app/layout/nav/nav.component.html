@@ -14,12 +14,18 @@
                 </li>
                 @for (item of navItems; track $index) {
                 <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/', item.toLowerCase()]">{{item}}</a>
+                    <a class="nav-link" [routerLink]="['/' ,item.link]" routerLinkActive="active">{{item.name}}</a>
 
                 </li>
                 }
             </ul>
-            <div class="icons me-auto">icons</div>
+            <div class="d-flex gap-4">
+                <div class="user">
+                    <img src="icons/user.png" class="me-2" alt="User icon">
+                    <img src="icons/arrow_down.png" alt="arrow icon">
+                </div>
+                <img src="icons/cart.png" alt="Cart icon">
+            </div>
         </div>
     </div>
 </nav>
