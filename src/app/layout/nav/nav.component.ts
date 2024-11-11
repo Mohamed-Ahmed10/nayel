@@ -10,8 +10,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class NavComponent {
   navItems = [
-    { name: 'Fabric', link: 'fabric' },
-    { name: 'Makhawer', link: 'products' },
+    { name: 'Fabric', link: 'products' },
+    { name: 'Makhawer', link: 'makhawer' },
     { name: 'Abaya', link: 'abaya' },
     { name: 'Designers', link: 'designers' },
     { name: 'International Designs', link: 'international_designs' }
