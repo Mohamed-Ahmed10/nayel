@@ -1,3 +1,9 @@
 .sale {
     font-family: "Oxygen", sans-serif;
+
+    .section_title p {
+        @media (min-width: 800px) {
+            width: 40%;
+        }
+    }
 }

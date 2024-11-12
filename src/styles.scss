@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&display=swap");
 
 :root {
-    --main_color: #463452;
-    --font_color: #404040;
+    @media (max-width:700px) {
+        font-size: .6rem;
+    }
 }
 body {
     font-family: "Exo", sans-serif !important;

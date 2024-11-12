@@ -1,10 +1,17 @@
 .navbar {
+    .navbar-toggler{
+        background-color: #eeeeee61;
+    }
     .container {
         position: relative;
 
         .logo {
             position: absolute;
-            top: 100%;
+            top: 200%;
+
+            @media (max-width:1000px) {
+                width: 40px;
+            }
         }
         a {
             color: #fff;
