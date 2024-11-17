@@ -1,5 +1,5 @@
-import { TranslateModule } from '@ngx-translate/core';
-import { Component } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavComponent } from "./layout/nav/nav.component";
 import { FooterComponent } from "./layout/footer/footer.component";
@@ -12,5 +12,10 @@ import { FooterComponent } from "./layout/footer/footer.component";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  translate: TranslateService = inject(TranslateService)
 
+  
+  translateText(lang: string) {
+    this.translate.use(lang)
+  }
 }
