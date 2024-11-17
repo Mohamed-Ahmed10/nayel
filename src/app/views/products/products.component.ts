@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { NavComponent } from "../../layout/nav/nav.component";
 import { ProductCardComponent } from "../../shared/product-card/product-card.component";
-import { Product } from '../../helpers/interfaces';
+import { Product } from '../../interfaces/interfaces';
 import { RouterLink } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [NavComponent, ProductCardComponent,RouterLink],
+  imports: [NavComponent, ProductCardComponent, RouterLink, TranslateModule],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss'
 })

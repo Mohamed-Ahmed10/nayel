@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import type { Product } from '../../../helpers/interfaces';
+import type { Product } from '../../../interfaces/interfaces';
 import { ProductCardComponent } from "../../../shared/product-card/product-card.component";
 
 

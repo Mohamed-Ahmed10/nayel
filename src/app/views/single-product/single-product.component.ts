@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { NavComponent } from "../../layout/nav/nav.component";
-import { Product } from '../../helpers/interfaces';
+import { Product } from '../../interfaces/interfaces';
 import { ProductCardComponent } from "../../shared/product-card/product-card.component";
 
 @Component({

@@ -1,7 +1,8 @@
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { TranslateHelperService } from '../../services/translate-helper.service';
+import { navItems } from '../../helpers/navItems';
 @Component({
   selector: 'app-nav',
   standalone: true,
@@ -10,37 +11,22 @@ import { Subscription } from 'rxjs';
   styleUrl: './nav.component.scss'
 })
 export class NavComponent implements OnInit, OnDestroy {
-  navItems = [
-    { name: 'Fabric', link: 'products' },
-    { name: 'Makhawer', link: 'makhawer' },
-    { name: 'Abaya', link: 'abaya' },
-    { name: 'Designers', link: 'designers' },
-    { name: 'International Designs', link: 'international_designs' }
-  ];
-  currentLang: string | undefined;
+  navItems = navItems
 
-  private langChangeSubscription: Subscription | undefined;
-
-  constructor(private translate: TranslateService) {
-    this.currentLang = this.translate.getDefaultLang();
-  }
+  constructor(private translateHelper: TranslateHelperService) { }
 
   ngOnInit(): void {
-    this.langChangeSubscription = this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
-      this.currentLang = event.lang;
-      console.log('Language changed to:', event.lang);
-    });
+    this.translateHelper.languageSubscribe()
   }
 
   ngOnDestroy(): void {
-    if (this.langChangeSubscription) {
-      this.langChangeSubscription.unsubscribe();
+    if (this.translateHelper.langChangeSubscription) {
+      this.translateHelper.langChangeSubscription.unsubscribe();
     }
   }
 
 
-  translateText() {
-    const newLang = this.currentLang === 'en' ? 'ar' : 'en';
-    this.translate.use(newLang);
+  onTranslateText(): void {
+    this.translateHelper.translateText();
   }
 }

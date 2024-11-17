@@ -1,3 +1,13 @@
 {
-    "home": "Home"
+    "home": "Home",
+    "products_title": "Our Collection Of Products",
+    "fabric": "Fabric",
+    "makhawer": "Makhawer",
+    "abaya": "Abaya",
+    "designers": "Designers",
+    "international_designs": "International designs",
+    "hero_intro": "Wear Class with Confidence",
+    "lorem": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla nunc in molestie feugiat. Nunc auctor consectetur elit, quis pulvina.  ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla nunc in molestie feugiat",
+    "search_text": "Search an item",
+    "on_sale":"ON-SALE Products"
 }

@@ -1,5 +1,5 @@
 .navbar {
-    .navbar-toggler{
+    .navbar-toggler {
         background-color: #eeeeee61;
     }
     .container {
@@ -9,12 +9,16 @@
             position: absolute;
             top: 200%;
 
-            @media (max-width:1000px) {
+            @media (max-width: 1000px) {
                 width: 40px;
             }
         }
         a {
             color: #fff;
         }
+    }
+
+    svg {
+        cursor: pointer;
     }
 }
