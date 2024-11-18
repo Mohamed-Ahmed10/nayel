@@ -14,5 +14,4 @@ export class ProductCardComponent {
   @Input() product!: Product;
   translateHelper = inject(TranslateHelperService)
 
-  currentLang = this.translateHelper.currentLang
 }

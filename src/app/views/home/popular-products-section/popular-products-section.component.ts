@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import type { Product } from '../../../interfaces/interfaces';
 import { ProductCardComponent } from "../../../shared/product-card/product-card.component";
+import { TranslateModule } from '@ngx-translate/core';
 
 
 
 @Component({
   selector: 'app-popular-products-section',
   standalone: true,
-  imports: [ProductCardComponent],
+  imports: [ProductCardComponent, TranslateModule],
   templateUrl: './popular-products-section.component.html',
   styleUrl: './popular-products-section.component.scss'
 })
