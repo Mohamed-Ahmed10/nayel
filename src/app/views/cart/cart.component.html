@@ -10,10 +10,10 @@
                         <table class="table align-middle mb-0">
                             <thead>
                                 <th></th>
-                                <th class="w-50">Product</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Total</th>
+                                <th class="w-50">{{'product'| translate}}</th>
+                                <th>{{'price'| translate}}</th>
+                                <th>{{'quantity' | translate}}</th>
+                                <th>{{'total' | translate}}</th>
                             </thead>
                             <tbody>
                                 <tr>
@@ -22,7 +22,7 @@
                                     </td>
                                     <td class="py-4 dark">
                                         <img src="icons/small_product.png" alt="product name">
-                                        <span class="fw-normal ps-2">Double Bed & Dressing</span>
+                                        <span class="fw-normal px-2">{{'productName' | translate}}</span>
                                     </td>
                                     <td class="py-4 light">$180</td>
                                     <td class="py-4">
@@ -41,7 +41,7 @@
                                     </td>
                                     <td class="py-4 dark">
                                         <img src="icons/small_product.png" alt="product name">
-                                        <span class="fw-normal ps-2">Double Bed & Dressing</span>
+                                        <span class="fw-normal px-2">{{'productName' | translate}}</span>
                                     </td>
                                     <td class="py-4 light">$180</td>
                                     <td class="py-4">
@@ -60,7 +60,7 @@
                                     </td>
                                     <td class="py-4 dark">
                                         <img src="icons/small_product.png" alt="product name">
-                                        <span class="fw-normal ps-2">Double Bed & Dressing</span>
+                                        <span class="fw-normal px-2">{{'productName' | translate}}</span>
                                     </td>
                                     <td class="py-4 light">$180</td>
                                     <td class="py-4">
@@ -79,7 +79,7 @@
                                     </td>
                                     <td class="py-4 dark">
                                         <img src="icons/small_product.png" alt="product name">
-                                        <span class="fw-normal ps-2">Double Bed & Dressing</span>
+                                        <span class="fw-normal px-2">{{'productName' | translate}}</span>
                                     </td>
                                     <td class="py-4 light">$180</td>
                                     <td class="py-4">
@@ -101,35 +101,35 @@
                 <div class="table_container">
                     <table class="table align-middle mb-0">
                         <thead>
-                            <th>Cart Total</th>
+                            <th>{{'cartTotal' | translate}}</th>
                             <th></th>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="py-4">SUBTOTAL</td>
+                                <td class="py-4">{{'subtotal' | translate}}</td>
                                 <td class="text-end light py-4">$190</td>
                             </tr>
                             <tr>
-                                <td class="py-4">DISCOUNT</td>
+                                <td class="py-4">{{'discount' | translate}}</td>
                                 <td class="text-end light">...</td>
                             </tr>
                             <tr>
-                                <td class="py-4">TOTAL</td>
+                                <td class="py-4">{{'total' | translate}}</td>
                                 <td class="text-end light py-4">$190</td>
                             </tr>
                         </tbody>
                     </table>
-                    <div class="table_footer">Proceed To Checkout</div>
+                    <div class="table_footer">{{'proceedToCheckout' | translate}}</div>
                 </div>
             </div>
         </div>
     </div>
     <div class="container mt-5">
-        <h2>You May Also Like</h2>
+        <h2>{{'youMayAlsoLike' | translate}}</h2>
         <div class="row">
             @for (product of products; track $index) {
             <div class="col-md-3 col-12">
-                <a routerLink="/single_product">
+                <a routerLink="/single_product">    
                     <app-product-card [product]="product" />
                 </a>
             </div>

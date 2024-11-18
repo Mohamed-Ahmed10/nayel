@@ -36,5 +36,15 @@
     "customerFeedback":"Customer Feedback",
     "complaintInquiryForm":"Complaint Inquiry Form",
     "returnAndExchangePolicy":"Return and Exchange Policy",
-    "copyRights":"Nayel Style 2024 © All rights reserved - Abu Dhabi UAE"
+    "copyRights":"Nayel Style 2024 © All rights reserved - Abu Dhabi UAE",
+    "product":"Product",
+    "price":"Price",
+    "quantity":"Quantity",
+    "total":"Total",
+    "productName":"Double Bed & Dressing",
+    "youMayAlsoLike":"You May Also Like",
+    "subtotal":"SUBTOTAL",
+    "discount":"DISCOUNT",
+    "cartTotal":"Cart Total",
+    "proceedToCheckout":"Proceed To Checkout"
 }
