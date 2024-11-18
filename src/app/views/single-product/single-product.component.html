@@ -2,9 +2,9 @@
 <div class="container pt-5 single_product">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Product Listing</a></li>
+            <li class="breadcrumb-item"><a href="#">{{'productListing' | translate}}</a></li>
             <img src="icons/arrow_right.png" class="arrow" width="8" alt="icon">
-            <li class="breadcrumb-item active" aria-current="page">Dummy Product Page</li>
+            <li class="breadcrumb-item active" aria-current="page">{{'dummyProductPage' | translate}}</li>
         </ol>
     </nav>
     <div class="row">
@@ -22,24 +22,20 @@
         </div>
         <div class="col-lg-6 col-12 px-5 py-3">
             <div class="d-flex justify-content-between align-items-center">
-                <h3 class="fw-bold">Long Sleeve Stain Abaya ....</h3>
+                <h3 class="fw-bold">{{'dummyProductName' | translate}} ....</h3>
                 <img src="icons/heart.png" alt="Love icon">
             </div>
             <div class="d-flex align-items-center">
                 <span class="fs-4">$45.98 | </span>
                 <img src="icons/stars.png" class="mx-2" alt="Stars">
-                ( 32 review )
+                ( 32 {{'reviews' | translate}}  )
             </div>
             <hr class="my-4">
-            <p>
-                Lorem ipsum dolor sit amet, consectetuer adipi scing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magn. Lorem ipsum dolor sit amet, consectetuer adipi scing elit, sed diam nonummy nibh
-                euismod tincidunt ut laoreet dolore magn.
-            </p>
+            <p>{{'longDesc' | translate}}</p>
             <ul class="p-2">
-                <li>Lorem ipsum dolor sit amet, adipi scing elit</li>
-                <li>Lorem ipsum dolor sit amet, adipi scing elit</li>
-                <li>Lorem ipsum dolor sit amet, adipi scing elit</li>
+                <li>{{'smallDesc' | translate}} </li>
+                <li>{{'smallDesc' | translate}} </li>
+                <li>{{'smallDesc' | translate}} </li>
             </ul>
             <div class="calc_btn d-flex gap-3 mt-5  ">
                 <div class="p-2 rounded-5 bg-transparent border-2 border-secondary border fs-4 flex-shrink-0">
@@ -47,16 +43,16 @@
                     <span>{{numOfProducts()}}</span>
                     <span (click)="increase()">+</span>
                 </div>
-                <button class="btn add_to_cart flex-grow-1">Add to Cart</button>
+                <button class="btn add_to_cart flex-grow-1">{{'addToCart' | translate}}</button>
             </div>
-            <button class="btn buy">Buy Now</button>
+            <button class="btn buy">{{'buyNow' | translate}}</button>
             <div class="my-3 mt-5">
                 <img src="icons/car.png" class="me-3" alt="icon">
-                <span>Free worldwide shipping on all orders over $100</span>
+                <span class="mx-2">{{'freeShipping' | translate}}</span>
             </div>
             <div class="my-3">
                 <img src="icons/delivary.png" class="me-3" alt="icon">
-                <span>Delivers in: 3-7 Working Days Shipping & Return</span>
+                <span class="mx-2">{{'deliveryNote' | translate}}</span>
             </div>
         </div>
     </div>
@@ -64,32 +60,21 @@
 <div class="description mt-5 py-4">
     <div class="container">
 
-        <h3 class="mb-4"><b>Description</b> | Reviews</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+        <h3 class="mb-4"><b>{{'description' | translate}}</b> | {{'reviews' | translate}}</h3>
+        <p>{{'longDesc' | translate}}</p>
         <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</li>
+            <li>{{'smallDesc' | translate}} </li>
+            <li>{{'smallDesc' | translate}} </li>
+            <li>{{'smallDesc' | translate}} </li>
+            <li>{{'smallDesc' | translate}} </li>
+            <li>{{'smallDesc' | translate}} </li>
+            <li>{{'smallDesc' | translate}} </li>
         </ul>
     </div>
 </div>
 <div class="similar_projects">
     <div class="container">
-        <h2>Similar Products</h2>
+        <h2>{{'similarProducts' | translate}}</h2>
         <div class="row">
             @for (product of products; track $index) {
             <div class="col-md-3 col-12">

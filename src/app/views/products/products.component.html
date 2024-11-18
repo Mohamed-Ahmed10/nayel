@@ -3,51 +3,51 @@
     <div class="row">
         <div class="col-lg-3 col-12 filters">
             <div class="filter-panel card p-3 mb-3">
-                <h2>Categories</h2>
+                <h2 class="text-center">{{'categories' | translate}}</h2>
                 <select class="dropdown active my-1">
-                    <option value="Fabric">Fabric</option>
-                    <option value="Makhawer">Makhawer</option>
-                    <option value="Abaya">Abaya</option>
-                    <option value="Designers">Designers</option>
-                    <option value="International Designs">International Designs</option>
+                    <option class="text-center" value="Fabric">{{'fabric' | translate}}</option>
+                    <option class="text-center" value="Makhawer">{{'makhawer' | translate}}</option>
+                    <option class="text-center" value="Abaya">{{'abaya' | translate}}</option>
+                    <option class="text-center" value="Designers">{{'designers' | translate}}</option>
+                    <option class="text-center" value="International Designs">{{'internationalDesigns' | translate}}</option>
                 </select>
                 <select class="dropdown my-1">
-                    <option value="Makhawer">Makhawer</option>
-                    <option value="Fabric">Fabric</option>
-                    <option value="Abaya">Abaya</option>
-                    <option value="Designers">Designers</option>
-                    <option value="International Designs">International Designs</option>
+                    <option class="text-center" value="Makhawer">{{'makhawer' | translate}}</option>
+                    <option class="text-center" value="Fabric">{{'fabric' | translate}}</option>
+                    <option class="text-center" value="Abaya">{{'abaya' | translate}}</option>
+                    <option class="text-center" value="Designers">{{'designers' | translate}}</option>
+                    <option class="text-center" value="International Designs">{{'internationalDesigns' | translate}}</option>
                 </select>
                 <select class="dropdown my-1">
-                    <option value="Abaya">Abaya</option>
-                    <option value="Fabric">Fabric</option>
-                    <option value="Makhawer">Makhawer</option>
-                    <option value="Designers">Designers</option>
-                    <option value="International Designs">International Designs</option>
+                    <option class="text-center" value="Abaya">{{'abaya' | translate}}</option>
+                    <option class="text-center" value="Fabric">{{'fabric' | translate}}</option>
+                    <option class="text-center" value="Makhawer">{{'makhawer' | translate}}</option>
+                    <option class="text-center" value="Designers">{{'designers' | translate}}</option>
+                    <option class="text-center" value="International Designs">{{'internationalDesigns' | translate}}</option>
                 </select>
                 <select class="dropdown my-1">
-                    <option value="Designers">Designers</option>
-                    <option value="Fabric">Fabric</option>
-                    <option value="Makhawer">Makhawer</option>
-                    <option value="Abaya">Abaya</option>
-                    <option value="International Designs">International Designs</option>
+                    <option class="text-center" value="Designers">{{'designers' | translate}}</option>
+                    <option class="text-center" value="Fabric">{{'fabric' | translate}}</option>
+                    <option class="text-center" value="Makhawer">{{'makhawer' | translate}}</option>
+                    <option class="text-center" value="Abaya">{{'abaya' | translate}}</option>
+                    <option class="text-center" value="International Designs">{{'internationalDesigns' | translate}}</option>
                 </select>
             </div>
             <div class="card p-3 my-3">
-                <h2>Price Range</h2>
-                <label>
+                <h2 class="text-center">{{'priceRange' | translate}}</h2>
+                <label class="text-center">
                     <input type="checkbox" checked>
                     $20.00 - $50.00
                 </label>
-                <label>
+                <label class="text-center">
                     <input type="checkbox">
                     $20.00 - $50.00
                 </label>
-                <label>
+                <label class="text-center">
                     <input type="checkbox">
                     $20.00 - $50.00
                 </label>
-                <label>
+                <label class="text-center">
                     <input type="checkbox">
                     $20.00 - $50.00
                 </label>
@@ -56,14 +56,13 @@
         <div class="col-lg-9 col-12">
             <h2>{{"productsTitle" | translate}}</h2>
             <div class="search-bar">
-                <input type="text" placeholder="Search An Item">
+                <input type="text" placeholder="{{'searchAnItem' | translate}}">
                 <div class="image_container">
                     <img src="icons/search.png" alt="icon">
                 </div>
             </div>
-            <h5 class="fw-bold">Showing 1–12 of 24 item(s)</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</p>
+            <h5 class="fw-bold">{{'showingNumber' | translate}}</h5>
+            <p>{{'showingDesc' | translate}}</p>
             <div class="row">
                 @for (product of products; track $index) {
                 <div class="col-md-4 col-12">
@@ -74,11 +73,12 @@
                 }
                 <div class="col-12">
                     <div class="load-more">
-                        <p class="item-count">Showing 1-12 of 24 item(s)</p>
+                        <p class="item-count">{{'showingNumber' | translate}}</p>
                         <div class="separator">
                             <div></div>
                         </div>
-                        <button class="load-more-btn">Load More
+                        <button class="load-more-btn">
+                            {{'loadMore' | translate}}
                             <img src="icons/arrow_right_light.png" alt="icon">
                         </button>
                     </div>

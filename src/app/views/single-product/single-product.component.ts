@@ -2,11 +2,12 @@ import { Component, signal } from '@angular/core';
 import { NavComponent } from "../../layout/nav/nav.component";
 import { Product } from '../../interfaces/interfaces';
 import { ProductCardComponent } from "../../shared/product-card/product-card.component";
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-single-product',
   standalone: true,
-  imports: [NavComponent, ProductCardComponent],
+  imports: [NavComponent, ProductCardComponent,TranslateModule],
   templateUrl: './single-product.component.html',
   styleUrl: './single-product.component.scss'
 })
