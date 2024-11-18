@@ -4,7 +4,7 @@ footer {
     font-family: "Oxygen", sans-serif;
 
     .footer_header {
-        width: 50%;
+        width: 70%;
 
         @media (max-width: 1000px) {
             width: initial;
@@ -13,14 +13,14 @@ footer {
     .search-bar {
         background-color: rgba(0, 0, 0, 0.1490196078);
         border-radius: 45px;
-        padding: 10px;
+        padding: 5px;
         display: flex;
         align-items: center;
         color: white;
         font-size: 16px;
         width: 48%;
         border: 1px solid;
-        margin: 70px auto;
+        margin: 20px auto;
 
         @media (max-width: 800px) {
             width: initial;
@@ -76,7 +76,7 @@ footer {
 
         li {
             @media (min-width: 800px) {
-                margin: 20px 0;
+                margin: 5px 0;
             }
             a {
                 text-decoration: none;
