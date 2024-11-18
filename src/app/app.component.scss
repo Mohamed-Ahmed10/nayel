@@ -1,0 +1,26 @@
+.social {
+    position: absolute;
+    top: 50%;
+    right: -90px;
+    transition: 0.5s all cubic-bezier(0.4, 0, 0.2, 1);
+    // background-color: #a5a5a557;
+    opacity: 0.4;
+
+    &:hover {
+        right: 0;
+        opacity: 1;
+    }
+
+    > div {
+        background-color: #0000004f;
+        margin: 10px 0;
+        padding: 10px;
+
+        svg,
+        span {
+            color: #fff;
+            margin: 0 5px;
+            font-weight: bold;
+        }
+    }
+}

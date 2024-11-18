@@ -19,11 +19,12 @@ footer {
         color: white;
         font-size: 16px;
         width: 48%;
-        margin: 70px auto;
         border: 1px solid;
+        margin: 70px auto;
 
         @media (max-width: 800px) {
             width: initial;
+            margin: 20px auto;
         }
 
         input {
@@ -44,10 +45,16 @@ footer {
             background-color: #5b3f6f;
             padding: 8px;
             width: 40px;
+
+            @media (max-width: 800px) {
+                width: 25px;
+            }
         }
     }
     .content {
-        border-inline-end: 1px solid;
+        @media (min-width: 1000px) {
+            border-inline-end: 1px solid;
+        }
         height: 100%;
         @media (min-width: 800px) {
             width: 75%;
@@ -57,6 +64,10 @@ footer {
         color: #9a9a9a;
         font-size: 18px;
         text-transform: uppercase;
+
+        @media (max-width: 800px) {
+            font-size: initial;
+        }
     }
 
     ul {
@@ -69,6 +80,10 @@ footer {
                 text-decoration: none;
                 font-size: 18px;
                 color: inherit;
+
+                @media (max-width: 800px) {
+                    font-size: 12px;
+                }
             }
         }
     }
