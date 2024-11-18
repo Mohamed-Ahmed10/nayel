@@ -16,24 +16,28 @@ export class PopularProductsSectionComponent {
     {
       image: '1',
       name: 'Long Sleeve Stain Abaya',
+      arName: 'عباءة بأكمام طويلة مزخرفة',
       priceBefore: 230,
       priceAfter: 200
     },
     {
       image: '2',
       name: 'Long Sleeve Stain Abaya',
+      arName: 'عباءة بأكمام طويلة مزخرفة',
       priceBefore: 230,
       priceAfter: 200
     },
     {
       image: '3',
       name: 'Long Sleeve Stain Abaya',
+      arName: 'عباءة بأكمام طويلة مزخرفة',
       priceBefore: 230,
       priceAfter: 200
     },
     {
       image: '4',
       name: 'Long Sleeve Stain Abaya',
+      arName: 'عباءة بأكمام طويلة مزخرفة',
       priceBefore: 230,
       priceAfter: 200
     },

@@ -7,15 +7,16 @@
         </div>
         }
         @if (product.saleAmount !== undefined && product.saleAmount > 0) {
-        <button class="sale_amount btn btn-danger rounded-4">Sale {{product.saleAmount}}%</button>
+        <button class="sale_amount btn btn-danger rounded-4">{{'sale' | translate}} {{product.saleAmount}}%</button>
         }
-        @else if (product.saleAmount !== undefined && product.saleAmount < 0 ) 
-        { <div class="discount">{{product.saleAmount}}%</div>
+        @else if (product.saleAmount !== undefined && product.saleAmount < 0 ) { <div class="discount">
+            {{product.saleAmount}}%
+    </div>
     }
 
 </div>
 <div class="product_info p-2">
-    <h4 class="fw-light mt-3">{{product.name}} ....</h4>
+    <h4 class="fw-light mt-3">{{currentLang === 'en'? product.name : product.arName}} ....</h4>
     <div class="d-flex justify-content-between">
         <div class="price">
             <del class="me-2">${{product.priceBefore}}</del>
