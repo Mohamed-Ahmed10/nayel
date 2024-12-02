@@ -12,13 +12,13 @@ export class TranslateHelperService {
 
   constructor(private translate: TranslateService) {
     this.currentLang = this.translate.getDefaultLang();
-    this.updateDirection(); // Initialize direction on service creation
+    this.updateDirection();
   }
 
   languageSubscribe() {
     this.langChangeSubscription = this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.currentLang = event.lang;
-      this.updateDirection(); // Update direction on language change
+      this.updateDirection();
     });
   }
 

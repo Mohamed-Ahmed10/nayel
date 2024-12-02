@@ -11,7 +11,7 @@
                 </li>
                 @for (item of navItems; track $index) {
                 <li class="nav-item">
-                    <a class="nav-link" [routerLink]="item.link">{{item.name | translate}}</a>
+                    <a class="nav-link" [routerLink]="item">{{item | translate}}</a>
                 </li>
                 }
             </ul>

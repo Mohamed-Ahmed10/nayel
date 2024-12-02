@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { NavComponent } from "../../layout/nav/nav.component";
 import { ProductCardComponent } from "../../shared/product-card/product-card.component";
 import { Product } from '../../interfaces/interfaces';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -12,7 +12,17 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss'
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit{
+  
+  router = inject(Router)
+  currentPath: string = ''
+
+  ngOnInit(): void {
+    this.currentPath=this.router.url.slice(1)
+
+  }
+
+
   products: Product[] = [
     {
       image: '1',

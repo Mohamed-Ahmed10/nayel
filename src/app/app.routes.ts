@@ -10,9 +10,29 @@ export const routes: Routes = [
         title: 'Home page',
     },
     {
-        path: 'products',
+        path: 'fabric',
         loadComponent: () => import('./views/products/products.component').then(mod => mod.ProductsComponent),
-        title: 'Products',
+        title: 'Fabric',
+    },
+    {
+        path: 'makhawer',
+        loadComponent: () => import('./views/products/products.component').then(mod => mod.ProductsComponent),
+        title: 'Makhawer',
+    },
+    {
+        path: 'abaya',
+        loadComponent: () => import('./views/products/products.component').then(mod => mod.ProductsComponent),
+        title: 'Abaya',
+    },
+    {
+        path: 'designers',
+        loadComponent: () => import('./views/products/products.component').then(mod => mod.ProductsComponent),
+        title: 'Designers',
+    },
+    {
+        path: 'internationalDesigns',
+        loadComponent: () => import('./views/products/products.component').then(mod => mod.ProductsComponent),
+        title: 'internationalDesigns',
     },
     {
         path: 'single_product',

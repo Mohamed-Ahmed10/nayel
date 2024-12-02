@@ -3,6 +3,6 @@ export interface Product {
     saleAmount?: number,
     name: string,
     arName: string,
-    priceBefore: number,
-    priceAfter: number
+    priceBefore?: number,
+    priceAfter?: number
 }

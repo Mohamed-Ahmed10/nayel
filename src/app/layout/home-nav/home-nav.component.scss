@@ -8,6 +8,7 @@
         .logo {
             position: absolute;
             top: 200%;
+            right: 0;
 
             @media (max-width: 1000px) {
                 width: 40px;
