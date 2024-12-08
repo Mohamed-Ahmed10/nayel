@@ -4,6 +4,7 @@
     "fabric": "Fabric",
     "makhawer": "Makhawer",
     "abaya": "Abaya",
+    "gulfDesignes":"gulf designes",
     "designers": "Designers",
     "internationalDesigns": "International designs",
     "heroIntro": "Wear Class with Confidence",
@@ -62,9 +63,17 @@
     "deliveryNote": "Delivers in: 3-7 Working Days Shipping & Return",
     "description": "Description",
     "reviews": "Reviews",
-    "longDesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex            ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "longDesc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex            ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco            laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit,            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco            laboris nisi ut aliquip ex ea commodo consequat.",
     "smallDesc":"Lorem ipsum dolor sit amet, consectetur adipisicing elit,",
     "similarProducts":"Similar Products",
     "buyNow":"Buy Now",
-    "dummyProductName":"Long Sleeve Stain Abaya"
+    "dummyProductName":"Long Sleeve Stain Abaya",
+    "cotton": "Cotton",
+    "silk": "Silk",
+    "others": "Others",
+    "women": "Women",
+    "girls": "Girls",
+    "kids": "Kids",
+    "western": "Western",
+    "morocco": "Moroccan"
 }

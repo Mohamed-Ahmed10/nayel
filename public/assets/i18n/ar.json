@@ -1,9 +1,10 @@
 {
-    "home": "الصفحة الرئيسية",
+    "home": "الرئيسية",
     "productsTitle": "مجموعتنا من المنتجات",
     "fabric": "الأقمشة",
     "makhawer": "المخاوير",
     "abaya": "العبايات",
+    "gulfDesignes":"تصميمات الجولف",
     "designers": "المصممون",
     "internationalDesigns": "تصاميم عالمية",
     "heroIntro": "ارتدي الأناقة بثقة",
@@ -66,5 +67,13 @@
     "similarProducts": "منتجات مشابهة",
     "buyNow": "اشترِ الآن",
     "dummyProductPage": "صفحة منتج افتراضية",
-    "dummyProductName": "عباءة طويلة الأكمام بستان"
+    "dummyProductName": "عباءة طويلة الأكمام بستان",
+    "cotton": "قطن",
+    "silk": "حرير",
+    "others": "أخرى",
+    "women": "نساء",
+    "girls": "بنات",
+    "kids": "أطفال",
+    "western": "غربي",
+    "morocco": "مغربي"
 }
