@@ -1,1 +1,1 @@
-export const navItems = ['fabric', 'makhawer', 'abaya', 'designers', 'internationalDesigns'];
+export const navItems = ['fabric', 'makhawer', 'abaya','gulf designes', 'designers', 'internationalDesigns'];

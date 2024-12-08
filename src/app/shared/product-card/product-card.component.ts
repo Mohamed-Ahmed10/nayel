@@ -8,10 +8,12 @@ import { TranslateHelperService } from '../../services/translate-helper.service'
   standalone: true,
   imports: [TranslateModule],
   templateUrl: './product-card.component.html',
-  styleUrl: './product-card.component.scss'
+  styleUrls: ['./product-card.component.scss'],
+  host: {
+    ngSkipHydration: 'true'
+  }
 })
 export class ProductCardComponent {
   @Input() product!: Product;
-  translateHelper = inject(TranslateHelperService)
-
+  translateHelper = inject(TranslateHelperService);
 }

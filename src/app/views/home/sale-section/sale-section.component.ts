@@ -8,11 +8,12 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [ProductCardComponent, TranslateModule],
   templateUrl: './sale-section.component.html',
-  styleUrl: './sale-section.component.scss'
+  styleUrls: ['./sale-section.component.scss']
 })
 export class SaleSectionComponent {
   products: Product[] = [
     {
+      id: '7123',
       image: '1',
       saleAmount: 13,
       name: 'Long Sleeve Stain Abaya', 
@@ -21,6 +22,7 @@ export class SaleSectionComponent {
       priceAfter: 200
     },
     {
+      id: '4567',
       image: '3',
       saleAmount: 13,
       name: 'Long Sleeve Stain Abaya', 
@@ -29,6 +31,7 @@ export class SaleSectionComponent {
       priceAfter: 200
     },
     {
+      id: '2891',
       image: '4',
       saleAmount: 13,
       name: 'Long Sleeve Stain Abaya', 
@@ -37,6 +40,7 @@ export class SaleSectionComponent {
       priceAfter: 200
     },
     {
+      id: '6345',
       image: '2',
       saleAmount: 13,
       name: 'Long Sleeve Stain Abaya', 

@@ -9,12 +9,13 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [NavComponent, ProductCardComponent,TranslateModule],
   templateUrl: './single-product.component.html',
-  styleUrl: './single-product.component.scss'
+  styleUrls: ['./single-product.component.scss']
 })
 export class SingleProductComponent {
   numOfProducts = signal<number>(0)
   products: Product[] = [
     {
+      id: '9876',
       image: '1',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
@@ -23,6 +24,7 @@ export class SingleProductComponent {
       priceAfter: 200
     },
     {
+      id: '5432',
       image: '3',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
@@ -31,6 +33,7 @@ export class SingleProductComponent {
       priceAfter: 200
     },
     {
+      id: '1098',
       image: '4',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
@@ -39,6 +42,7 @@ export class SingleProductComponent {
       priceAfter: 200
     },
     {
+      id: '7654',
       image: '4',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',

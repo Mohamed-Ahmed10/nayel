@@ -5,3 +5,68 @@
 svg {
     cursor: pointer;
 }
+
+.user {
+    cursor: pointer;
+
+    .dropdown-menu {
+        display: none;
+        top: 100%;
+        right: 0;
+        min-width: 200px;
+        z-index: 1000;
+        margin-top: 0.5rem;
+        
+        &.show {
+            display: block;
+        }
+    }
+
+    .dropdown-item {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: #f8f9fa;
+        }
+    }
+}
+
+.nav-item {
+    .dropdown-menu {
+        display: none;
+        top: 100%;
+        left: 0;
+        min-width: 200px;
+        z-index: 1000;
+        margin-top: 0.125rem;
+        border: none;
+        
+        &.show {
+            display: block;
+            animation: fadeIn 0.2s ease-in-out;
+        }
+    }
+
+    .dropdown-item {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: #f8f9fa;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -9,34 +9,46 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [NavComponent, ProductCardComponent, TranslateModule],
   templateUrl: './cart.component.html',
-  styleUrl: './cart.component.scss'
+  styleUrls: ['./cart.component.scss']
 })
 export class CartComponent {
   products: Product[] = [
     {
+      id: '4321',
       image: '1',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
       arName: 'عباءة بأكمام طويلة مزخرفة',
+      priceBefore: 230,
+      priceAfter: 200
     },
     {
+      id: '8765',
       image: '3',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
       arName: 'عباءة بأكمام طويلة مزخرفة',
+      priceBefore: 230,
+      priceAfter: 200
     },
     {
+      id: '2109',
       image: '4',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
       arName: 'عباءة بأكمام طويلة مزخرفة',
+      priceBefore: 230,
+      priceAfter: 200
     },
     {
-      image: '4',
+      id: '6543',
+      image: '2',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
       arName: 'عباءة بأكمام طويلة مزخرفة',
-    },
+      priceBefore: 230,
+      priceAfter: 200
+    }
   ]
 
 }

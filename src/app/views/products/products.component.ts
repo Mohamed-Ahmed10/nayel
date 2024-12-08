@@ -10,7 +10,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [NavComponent, ProductCardComponent, RouterLink, TranslateModule],
   templateUrl: './products.component.html',
-  styleUrl: './products.component.scss'
+  styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit{
   
@@ -25,6 +25,7 @@ export class ProductsComponent implements OnInit{
 
   products: Product[] = [
     {
+      id: '3412',
       image: '1',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
@@ -33,6 +34,7 @@ export class ProductsComponent implements OnInit{
       priceAfter: 200
     },
     {
+      id: '5678',
       image: '3',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
@@ -41,6 +43,7 @@ export class ProductsComponent implements OnInit{
       priceAfter: 200
     },
     {
+      id: '9012',
       image: '4',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
@@ -49,6 +52,7 @@ export class ProductsComponent implements OnInit{
       priceAfter: 200
     },
     {
+      id: '3456',
       image: '2',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
@@ -57,6 +61,7 @@ export class ProductsComponent implements OnInit{
       priceAfter: 200
     },
     {
+      id: '7890',
       image: '1',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
@@ -65,6 +70,7 @@ export class ProductsComponent implements OnInit{
       priceAfter: 200
     },
     {
+      id: '1234',
       image: '3',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
@@ -73,6 +79,7 @@ export class ProductsComponent implements OnInit{
       priceAfter: 200
     },
     {
+      id: '5678',
       image: '4',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
@@ -81,6 +88,7 @@ export class ProductsComponent implements OnInit{
       priceAfter: 200
     },
     {
+      id: '9012',
       image: '2',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
@@ -89,6 +97,7 @@ export class ProductsComponent implements OnInit{
       priceAfter: 200
     },
     {
+      id: '3456',
       image: '1',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
@@ -97,6 +106,7 @@ export class ProductsComponent implements OnInit{
       priceAfter: 200
     },
     {
+      id: '7890',
       image: '3',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
@@ -105,6 +115,7 @@ export class ProductsComponent implements OnInit{
       priceAfter: 200
     },
     {
+      id: '1234',
       image: '4',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
@@ -113,12 +124,13 @@ export class ProductsComponent implements OnInit{
       priceAfter: 200
     },
     {
+      id: '5678',
       image: '2',
       saleAmount: -13,
       name: 'Long Sleeve Stain Abaya',
       arName: 'عباءة بأكمام طويلة مزخرفة',
       priceBefore: 230,
       priceAfter: 200
-    },
+    }
   ]
 }

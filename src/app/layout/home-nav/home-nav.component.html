@@ -10,16 +10,24 @@
                     <a class="nav-link active" aria-current="page" routerLink="/">{{'home' | translate}}</a>
                 </li>
                 @for (item of navItems; track $index) {
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="item">{{item | translate}}</a>
+                <li class="nav-item position-relative" 
+                    (mouseenter)="hoveredItem = item" 
+                    (mouseleave)="hoveredItem = ''">
+                    <a class="nav-link" [routerLink]="item">
+                        {{item | translate}}
+                    </a>
+                    <div class="dropdown-menu position-absolute rounded shadow p-2" 
+                         [class.show]="hoveredItem === item" *ngIf="hasDropdown(item)">
+                        @for (subItem of getSubItems(item); track $index) {
+                        <a class="dropdown-item" href="#">
+                            {{subItem.name | translate}}
+                        </a>
+                        }
+                    </div>
                 </li>
                 }
             </ul>
             <div class="d-flex gap-4">
-                <div class="user">
-                    <img src="icons/user_light.png" class="me-2" alt="User icon">
-                    <img src="icons/arrow_down_light.png" alt="arrow icon">
-                </div>
                 <a routerLink="/cart">
                     <img src="icons/cart_light.png" alt="Cart icon">
                 </a>

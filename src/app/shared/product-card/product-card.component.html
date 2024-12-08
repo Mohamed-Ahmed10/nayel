@@ -9,20 +9,20 @@
         @if (product.saleAmount !== undefined && product.saleAmount > 0) {
         <button class="sale_amount btn btn-danger rounded-4">{{'sale' | translate}} {{product.saleAmount}}%</button>
         }
-        @else if (product.saleAmount !== undefined && product.saleAmount < 0 ) { <div class="discount">
+        @else if (product.saleAmount !== undefined && product.saleAmount < 0 ) {
+        <div class="discount">
             {{product.saleAmount}}%
+        </div>
+        }
     </div>
-    }
-
-</div>
-<div class="product_info p-2">
-    <h4 class="fw-light mt-3">{{translateHelper.currentLang === 'en'? product.name : product.arName}} ....</h4>
-    <div class="d-flex justify-content-between">
-        <!-- <div class="price">
-            <del class="me-2">${{product.priceBefore}}</del>
-            <span class="fw-bold">${{product.priceAfter}}</span>
-        </div> -->
-        <img src="icons/plus.png" alt="icon" class="add">
+    <div class="product_info p-2">
+        <h4 class="fw-light mt-3">{{translateHelper.currentLang === 'en'? product.name : product.arName}} ....</h4>
+        <div>
+            <a [href]="'https://wa.me/1234567890?text=Hi, I am interested in this product ID : ' + product.id" 
+               target="_blank" 
+               class="whatsapp-btn btn btn-success">
+                <i class="bi bi-whatsapp me-2"></i>WhatsApp
+            </a>
+        </div>
     </div>
-</div>
 </div>

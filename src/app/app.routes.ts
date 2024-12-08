@@ -35,6 +35,11 @@ export const routes: Routes = [
         title: 'internationalDesigns',
     },
     {
+        path: 'gulf-designes',
+        loadComponent: () => import('./views/products/products.component').then(mod => mod.ProductsComponent),
+        title: 'gulf designes',
+    },
+    {
         path: 'single_product',
         loadComponent: () => import('./views/single-product/single-product.component').then(mod => mod.SingleProductComponent),
         title: 'Single product',

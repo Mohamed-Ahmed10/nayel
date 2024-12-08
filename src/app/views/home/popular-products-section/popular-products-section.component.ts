@@ -10,11 +10,12 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [ProductCardComponent, TranslateModule],
   templateUrl: './popular-products-section.component.html',
-  styleUrl: './popular-products-section.component.scss'
+  styleUrls: ['./popular-products-section.component.scss']
 })
 export class PopularProductsSectionComponent {
   products: Product[] = [
     {
+      id: '8374',
       image: '1',
       name: 'Long Sleeve Stain Abaya',
       arName: 'عباءة بأكمام طويلة مزخرفة',
@@ -22,6 +23,7 @@ export class PopularProductsSectionComponent {
       priceAfter: 200
     },
     {
+      id: '5291',
       image: '2',
       name: 'Long Sleeve Stain Abaya',
       arName: 'عباءة بأكمام طويلة مزخرفة',
@@ -29,6 +31,7 @@ export class PopularProductsSectionComponent {
       priceAfter: 200
     },
     {
+      id: '9463',
       image: '3',
       name: 'Long Sleeve Stain Abaya',
       arName: 'عباءة بأكمام طويلة مزخرفة',
@@ -36,6 +39,7 @@ export class PopularProductsSectionComponent {
       priceAfter: 200
     },
     {
+      id: '1857',
       image: '4',
       name: 'Long Sleeve Stain Abaya',
       arName: 'عباءة بأكمام طويلة مزخرفة',
