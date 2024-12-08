@@ -13,7 +13,7 @@
                 <li class="nav-item position-relative" 
                     (mouseenter)="hoveredItem = item" 
                     (mouseleave)="hoveredItem = ''">
-                    <a class="nav-link" [routerLink]="item">
+                    <a class="nav-link" [routerLink]="'/'+item.split(' ').join('_')">
                         {{item | translate}}
                     </a>
                     <div class="dropdown-menu position-absolute rounded shadow p-2" 
