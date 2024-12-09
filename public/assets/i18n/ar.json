@@ -2,8 +2,8 @@
     "home": "الرئيسية",
     "productsTitle": "مجموعتنا من المنتجات",
     "fabric": "الأقمشة",
-    "makhawer": "المخاوير",
-    "abaya": "العبايات",
+    "makhawer": "مخاوير",
+    "abaya": "عبايات",
     "gulfDesignes": "تصميمات خليجية",
     "internationalDesigns": "تصاميم عالمية",
     "heroIntro": "ارتدي الأناقة بثقة",
@@ -73,5 +73,6 @@
     "girls": "فتيات",
     "kids": "أطفال",
     "western": "غربي",
-    "morocco": "مغربي"
+    "morocco": "مغربي",
+    "scarves":"شيلة"
 }
