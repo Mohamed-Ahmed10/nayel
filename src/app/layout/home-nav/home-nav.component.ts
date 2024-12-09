@@ -32,11 +32,13 @@ export class HomeNavComponent implements OnInit, OnDestroy {
       ],
       internationalDesigns: [
         { name: 'western' },
+        { name: 'eastern' },
+        { name: 'asian' },
         { name: 'morocco' }
       ],
       abaya:[
-        { name: 'Abaya' },
-        { name: 'Scarves' }
+        { name: 'abaya' },
+        { name: 'scarves' }
       ]
     };
     return subItems[item as keyof typeof subItems] || [];

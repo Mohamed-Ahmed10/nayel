@@ -9,28 +9,32 @@
                     <option class="text-center" value="Makhawer">{{'makhawer' | translate}}</option>
                     <option class="text-center" value="Abaya">{{'abaya' | translate}}</option>
                     <option class="text-center" value="Designers">{{'designers' | translate}}</option>
-                    <option class="text-center" value="International Designs">{{'internationalDesigns' | translate}}</option>
+                    <option class="text-center" value="International Designs">{{'internationalDesigns' | translate}}
+                    </option>
                 </select>
                 <select class="dropdown my-1">
                     <option class="text-center" value="Makhawer">{{'makhawer' | translate}}</option>
                     <option class="text-center" value="Fabric">{{'fabric' | translate}}</option>
                     <option class="text-center" value="Abaya">{{'abaya' | translate}}</option>
                     <option class="text-center" value="Designers">{{'designers' | translate}}</option>
-                    <option class="text-center" value="International Designs">{{'internationalDesigns' | translate}}</option>
+                    <option class="text-center" value="International Designs">{{'internationalDesigns' | translate}}
+                    </option>
                 </select>
                 <select class="dropdown my-1">
                     <option class="text-center" value="Abaya">{{'abaya' | translate}}</option>
                     <option class="text-center" value="Fabric">{{'fabric' | translate}}</option>
                     <option class="text-center" value="Makhawer">{{'makhawer' | translate}}</option>
                     <option class="text-center" value="Designers">{{'designers' | translate}}</option>
-                    <option class="text-center" value="International Designs">{{'internationalDesigns' | translate}}</option>
+                    <option class="text-center" value="International Designs">{{'internationalDesigns' | translate}}
+                    </option>
                 </select>
                 <select class="dropdown my-1">
                     <option class="text-center" value="Designers">{{'designers' | translate}}</option>
                     <option class="text-center" value="Fabric">{{'fabric' | translate}}</option>
                     <option class="text-center" value="Makhawer">{{'makhawer' | translate}}</option>
                     <option class="text-center" value="Abaya">{{'abaya' | translate}}</option>
-                    <option class="text-center" value="International Designs">{{'internationalDesigns' | translate}}</option>
+                    <option class="text-center" value="International Designs">{{'internationalDesigns' | translate}}
+                    </option>
                 </select>
             </div>
             <div class="card p-3 my-3">
@@ -66,9 +70,7 @@
             <div class="row">
                 @for (product of products; track $index) {
                 <div class="col-md-4 col-12">
-                    <a routerLink="/single_product">
-                        <app-product-card [product]="product" />
-                    </a>
+                    <app-product-card [product]="product" />
                 </div>
                 }
                 <div class="col-12">
