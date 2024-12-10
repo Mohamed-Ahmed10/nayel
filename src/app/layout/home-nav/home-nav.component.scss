@@ -1,4 +1,19 @@
 .navbar {
+    .navContainer {
+        .navbar-nav {
+            @media (max-width: 991px) {
+                width: 50%;
+            }
+        }
+        .upperLogo {
+            @media (max-width: 991px) {
+                width: 50%;
+            }
+            @media (min-width: 992px) {
+                display: none;
+            }
+        }
+    }
     .navbar-toggler {
         background-color: #eeeeee61;
     }
@@ -33,7 +48,7 @@
             min-width: 200px;
             z-index: 1000;
             margin-top: 0.5rem;
-            
+
             &.show {
                 display: block;
             }
@@ -60,7 +75,7 @@
             margin-top: 0.125rem;
             border: none;
             background-color: rgba(255, 255, 255, 0.95);
-            
+
             &.show {
                 display: block;
                 animation: fadeIn 0.2s ease-in-out;

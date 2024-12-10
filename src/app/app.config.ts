@@ -4,7 +4,7 @@ import { provideRouter, withComponentInputBinding } from '@angular/router';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { HttpClient, HttpClientModule, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { HttpClient, HttpClientModule, provideHttpClient, withInterceptorsFromDi, withFetch } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
@@ -24,6 +24,6 @@ export const appConfig: ApplicationConfig = {
   })]),
   provideRouter(routes, withComponentInputBinding()),
   provideClientHydration(),
-  provideHttpClient(withInterceptorsFromDi())
+  provideHttpClient(withInterceptorsFromDi(), withFetch())
   ]
 };
