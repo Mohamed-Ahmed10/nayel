@@ -1,63 +1,35 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { TranslateHelperService } from '../../services/translate-helper.service';
 import { CommonModule } from '@angular/common';
-import { navItems } from '../../helpers/navItems';
+import { NavServiceService } from '../../services/nav-service.service';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [RouterLink,  TranslateModule, CommonModule],
+  imports: [RouterLink, TranslateModule, CommonModule, RouterLinkActive],
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent implements OnInit, OnDestroy {
-  hoveredItem = '';
-  navItems = navItems
+export class NavComponent {
+  constructor(public navService: NavServiceService) { }
 
-  constructor(private translateHelper: TranslateHelperService) { }
+  hoveredItem = ''
+
+  onTranslateText() {
+    this.navService.onTranslateText();
+  }
+
+  hasDropdown(item: string) {
+    return this.navService.hasDropdown(item);
+  }
+
+  getNavItems() {
+    return this.navService.navItems;
+  }
 
   getSubItems(item: string) {
-    const subItems = {
-      products: [
-        { name: 'abayas' },
-        { name: 'dresses' },
-        { name: 'accessories' }
-      ],
-      fabric: [
-        { name: 'cotton' },
-        { name: 'silk' },
-        { name: 'others' }
-      ],
-      makhawer: [
-        { name: 'women' },
-        { name: 'girls' },
-        { name: 'kids' }
-      ],
-      internationalDesigns: [
-        { name: 'western' },
-        { name: 'morocco' }
-      ]
-    };
-    return subItems[item as keyof typeof subItems] || [];
+    return this.navService.getSubItems(item);
   }
 
-  hasDropdown(item: string): boolean {
-    return this.getSubItems(item).length > 0;
-  }
-
-  onTranslateText(): void {
-    this.translateHelper.translateText();
-  }
-
-  ngOnInit(): void {
-    this.translateHelper.languageSubscribe();
-  }
-
-  ngOnDestroy(): void {
-    if (this.translateHelper.langChangeSubscription) {
-      this.translateHelper.langChangeSubscription.unsubscribe();
-    }
-  }
 }

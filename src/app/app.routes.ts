@@ -35,7 +35,7 @@ export const routes: Routes = [
         title: 'internationalDesigns',
     },
     {
-        path: 'gulfDesignes',
+        path: 'gulfDesigns',
         loadComponent: () => import('./views/products/products.component').then(mod => mod.ProductsComponent),
         title: 'gulf designes',
     },

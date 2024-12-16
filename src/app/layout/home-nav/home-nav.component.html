@@ -11,9 +11,9 @@
             <div class="d-flex mx-auto navContainer">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" routerLink="/">{{'home' | translate}}</a>
+                        <a class="nav-link" aria-current="page" routerLink="/">{{'home' | translate}}</a>
                     </li>
-                    @for (item of navItems; track $index) {
+                    @for (item of getNavItems(); track $index) {
                     <li class="nav-item position-relative" (mouseenter)="hoveredItem = item"
                         (mouseleave)="hoveredItem = ''">
                         <a class="nav-link" [routerLink]="'/'+item.split(' ').join('_')">
@@ -49,6 +49,5 @@
                 </svg>
             </div>
         </div>
-        <img src="logo.png" class="logo" alt="Icon">
     </div>
 </nav>

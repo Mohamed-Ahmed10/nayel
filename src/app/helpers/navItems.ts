@@ -1,1 +1,0 @@
-export const navItems = ['fabric', 'makhawer', 'abaya','gulfDesignes', 'internationalDesigns'];
