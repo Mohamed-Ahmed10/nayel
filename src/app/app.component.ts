@@ -17,16 +17,14 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(private translateHelper: TranslateHelperService) { }
 
   ngOnInit(): void {
-    // Subscribe to language changes
     this.translateHelper.languageSubscribe();
   }
 
   ngOnDestroy(): void {
-    // Unsubscribe to prevent memory leaks
     this.translateHelper.langChangeSubscription?.unsubscribe();
   }
 
   get isRtl(): boolean {
-    return this.translateHelper.isRtl; // Bind the RTL property for the template
+    return this.translateHelper.isRtl;
   }
 }

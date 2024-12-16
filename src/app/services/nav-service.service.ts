@@ -32,7 +32,6 @@ export class NavServiceService implements OnInit, OnDestroy {
 
   constructor(private translateHelper: TranslateHelperService) {}
 
-
   getSubItems(item: string) {
     return this.items[item as keyof typeof this.items] || [];
   }
