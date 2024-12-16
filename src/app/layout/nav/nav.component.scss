@@ -8,37 +8,12 @@ svg {
 
 .user {
     cursor: pointer;
-
-    .dropdown-menu {
-        display: none;
-        top: 100%;
-        right: 0;
-        min-width: 200px;
-        z-index: 1000;
-        margin-top: 0.5rem;
-        
-        &.show {
-            display: block;
-        }
-    }
-
-    .dropdown-item {
-        padding: 0.5rem 1rem;
-        cursor: pointer;
-        transition: background-color 0.2s;
-
-        &:hover {
-            background-color: #f8f9fa;
-        }
-    }
 }
 
 .nav-item {
     .dropdown-menu {
-        display: none;
         top: 73%;
-        left: 0;
-        min-width: 200px;
+        left: -40%;
         z-index: 1000;
         margin-top: 0.125rem;
         border: none;

@@ -10,7 +10,7 @@
             font-weight: bold;
         }
         .filter-panel {
-            .dropdown {
+            .dropdown-center {
                 width: 100%;
                 padding: 5px;
                 border: none;
@@ -24,6 +24,10 @@
 
                 &.active {
                     background-image: url(../../../../public/icons/arrow_down2.png), linear-gradient(#cfc5d1, #cfc5d1);
+                }
+
+                .dropdown-toggle::after {
+                    display: none;
                 }
             }
 

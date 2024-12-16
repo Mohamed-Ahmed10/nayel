@@ -4,38 +4,46 @@
         <div class="col-lg-3 col-12 filters">
             <div class="filter-panel card p-3 mb-3">
                 <h2 class="text-center">{{'categories' | translate}}</h2>
-                <select class="dropdown active my-1">
-                    <option class="text-center" value="Fabric">{{'fabric' | translate}}</option>
-                    <option class="text-center" value="Makhawer">{{'makhawer' | translate}}</option>
-                    <option class="text-center" value="Abaya">{{'abaya' | translate}}</option>
-                    <option class="text-center" value="Designers">{{'designers' | translate}}</option>
-                    <option class="text-center" value="International Designs">{{'internationalDesigns' | translate}}
-                    </option>
-                </select>
-                <select class="dropdown my-1">
-                    <option class="text-center" value="Makhawer">{{'makhawer' | translate}}</option>
-                    <option class="text-center" value="Fabric">{{'fabric' | translate}}</option>
-                    <option class="text-center" value="Abaya">{{'abaya' | translate}}</option>
-                    <option class="text-center" value="Designers">{{'designers' | translate}}</option>
-                    <option class="text-center" value="International Designs">{{'internationalDesigns' | translate}}
-                    </option>
-                </select>
-                <select class="dropdown my-1">
-                    <option class="text-center" value="Abaya">{{'abaya' | translate}}</option>
-                    <option class="text-center" value="Fabric">{{'fabric' | translate}}</option>
-                    <option class="text-center" value="Makhawer">{{'makhawer' | translate}}</option>
-                    <option class="text-center" value="Designers">{{'designers' | translate}}</option>
-                    <option class="text-center" value="International Designs">{{'internationalDesigns' | translate}}
-                    </option>
-                </select>
-                <select class="dropdown my-1">
-                    <option class="text-center" value="Designers">{{'designers' | translate}}</option>
-                    <option class="text-center" value="Fabric">{{'fabric' | translate}}</option>
-                    <option class="text-center" value="Makhawer">{{'makhawer' | translate}}</option>
-                    <option class="text-center" value="Abaya">{{'abaya' | translate}}</option>
-                    <option class="text-center" value="International Designs">{{'internationalDesigns' | translate}}
-                    </option>
-                </select>
+                <div class="dropdown-center">
+                    <button class="bg-transparent border-0 dropdown-toggle w-100" data-bs-toggle="dropdown">
+                        {{'fabric' | translate}}
+                    </button>
+                    <ul class="dropdown-menu text-center">
+                        <li class="dropdown-item" value="cotton">{{'cotton' | translate}}</li>
+                        <li class="dropdown-item" value="silk">{{'silk' | translate}}</li>
+                        <li class="dropdown-item" value="others">{{'others' | translate}}</li>
+                    </ul>
+                </div>
+                <div class="dropdown-center">
+                    <button class="bg-transparent border-0 dropdown-toggle w-100" data-bs-toggle="dropdown">
+                        {{'makhawer' | translate}}
+                    </button>
+                    <ul class="dropdown-menu text-center">
+                        <li class="dropdown-item" value="women">{{'women' | translate}}</li>
+                        <li class="dropdown-item" value="girls">{{'girls' | translate}}</li>
+                        <li class="dropdown-item" value="kids">{{'kids' | translate}}</li>
+                    </ul>
+                </div>
+                <div class="dropdown-center">
+                    <button class="bg-transparent border-0 dropdown-toggle w-100" data-bs-toggle="dropdown">
+                        {{'abaya' | translate}}
+                    </button>
+                    <ul class="dropdown-menu text-center">
+                        <li class="dropdown-item" value="abaya">{{'abaya' | translate}}</li>
+                        <li class="dropdown-item" value="scarves">{{'scarves' | translate}}</li>
+                    </ul>
+                </div>
+                <div class="dropdown-center">
+                    <button class="bg-transparent border-0 dropdown-toggle w-100" data-bs-toggle="dropdown">
+                        {{'internationalDesigns' | translate}}
+                    </button>
+                    <ul class="dropdown-menu text-center">
+                        <li class="dropdown-item" value="western">{{'western' | translate}}</li>
+                        <li class="dropdown-item" value="eastern">{{'eastern' | translate}}</li>
+                        <li class="dropdown-item" value="asian">{{'asian' | translate}}</li>
+                        <li class="dropdown-item" value="morocco">{{'morocco' | translate}}</li>
+                    </ul>
+                </div>
             </div>
             <div class="card p-3 my-3">
                 <h2 class="text-center">{{'priceRange' | translate}}</h2>
