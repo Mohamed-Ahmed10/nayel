@@ -45,19 +45,7 @@
                         <li class="capitalize fw-bold">
                             <a href="#">{{'contactUs'| translate}}</a>
                         </li>
-                        <li class="capitalize fw-bold">
-                            <a href="/assets/pdf/privacyPolicy.docx" download>{{'privacyPolicy'| translate}}</a>
-                        </li>
-                        <li class="capitalize fw-bold">
-                            <a href="/assets/pdf/shippingPolicy.docx" download>{{'shippingPolicy'| translate}}</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-6 col-lg-3 mt-5">
-                <div>
-                    <h5 class="uppercase">{{'costumerCare'| translate}}</h5>
-                    <ul class="text-capitalize fw-bold">
+
                         <li class="capitalize fw-bold">
                             <a href="#">{{'customerFeedback'| translate}}</a>
                         </li>
@@ -65,10 +53,23 @@
                             <a href="#">{{'complaintInquiryForm'| translate}}</a>
                         </li>
                         <li class="capitalize fw-bold">
-                            <a [href]="'/assets/pdf/returnAndExchangePolicy'+  (isRtl ? '-ar.docx' : '.docx' )" download>{{'returnAndExchangePolicy'| translate}}</a>
+                            <a href="/assets/pdf/orderTracking.docx" download>{{'orderTracking'| translate}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 mt-5">
+                <div>
+                    <h5 class="uppercase">{{'termsAndConditions'| translate}}</h5>
+                    <ul class="text-capitalize fw-bold">
+                        <li class="capitalize fw-bold">
+                            <a href="/assets/pdf/privacyPolicy.docx" download>{{'privacyPolicy'| translate}}</a>
                         </li>
                         <li class="capitalize fw-bold">
-                            <a href="/assets/pdf/orderTracking.docx" download>{{'orderTracking'| translate}}</a>
+                            <a href="/assets/pdf/shippingPolicy.docx" download>{{'shippingPolicy'| translate}}</a>
+                        </li>
+                        <li class="capitalize fw-bold">
+                            <a [href]="'/assets/pdf/returnAndExchangePolicy'+  (isRtl ? '-ar.docx' : '.docx' )" download>{{'returnAndExchangePolicy'| translate}}</a>
                         </li>
                     </ul>
                 </div>
