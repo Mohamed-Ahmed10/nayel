@@ -22,5 +22,8 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.translateHelper.langChangeSubscription?.unsubscribe();
   }
+  get isRtl(): boolean {
+    return this.translateHelper.isRtl; // Bind the RTL property for the template
+  }
 
 }
