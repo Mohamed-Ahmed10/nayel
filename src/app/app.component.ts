@@ -3,7 +3,6 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from "./layout/footer/footer.component";
 import { TranslateHelperService } from './services/translate-helper.service';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +23,4 @@ export class AppComponent implements OnInit, OnDestroy {
     this.translateHelper.langChangeSubscription?.unsubscribe();
   }
 
-  get isRtl(): boolean {
-    return this.translateHelper.isRtl;
-  }
 }
