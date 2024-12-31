@@ -1,24 +1,29 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { NavComponent } from "../../layout/nav/nav.component";
 import { ProductCardComponent } from "../../shared/product-card/product-card.component";
 import { Product } from '../../interfaces/interfaces';
 import { Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { NavServiceService } from '../../services/nav-service.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [NavComponent, ProductCardComponent, TranslateModule],
+  imports: [NavComponent, ProductCardComponent, TranslateModule, CommonModule],
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
 
-  router = inject(Router)
+  constructor(private router: Router, private navService: NavServiceService) { }
+
   currentPath: string = ''
+  itemCategories = signal<string[]>([])
 
   ngOnInit(): void {
     this.currentPath = this.router.url.slice(1)
+    this.itemCategories.set(this.navService.getSubItems(this.currentPath).map(material => material.name))
   }
 
 
@@ -132,6 +137,4 @@ export class ProductsComponent implements OnInit {
       priceAfter: 200
     }
   ]
-
-
 }

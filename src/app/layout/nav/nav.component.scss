@@ -1,5 +1,5 @@
 .active {
-    background-color: #000;
+    background-color: #7b7b7b;
     color: #fff !important;
 }
 svg {
@@ -57,8 +57,80 @@ svg {
     }
 }
 
-.fixedLogo {
-    position: absolute;
-    top: 10vh;
-    left: 80%;
+.price_currency {
+    .sec-center {
+        position: relative;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    [type="checkbox"]:checked,
+    [type="checkbox"]:not(:checked) {
+        display: none;
+    }
+
+    .dropdown:checked + label,
+    .dropdown:not(:checked) + label {
+        font-size: 15px;
+        height: 50px;
+        border-radius: 4px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: #102770;
+        transition: all 200ms linear;
+    }
+
+    .dropdown:checked ~ .section-dropdown {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .section-dropdown {
+        position: absolute;
+        padding: 5px;
+        background-color: #d2d2d2;
+        top: 70px;
+        left: -50px;
+        border-radius: 4px;
+        box-shadow: 0 14px 35px 0 rgba(9, 9, 12, 0.4);
+        z-index: 2;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(20px);
+        width: max-content;
+        transition: all 200ms linear;
+    }
+
+    a {
+        color: #fff;
+        font-size: 15px;
+        padding: 5px 20px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    a:hover {
+        color: #fff !important;
+        background-color: #5a3f6d;
+    }
+
+    .dropdown-sub:checked ~ .section-dropdown-sub {
+        pointer-events: auto;
+        opacity: 1;
+        max-height: 999px;
+    }
+
+    .section-dropdown-sub {
+        display: block;
+        pointer-events: none;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 200ms linear;
+    }
 }

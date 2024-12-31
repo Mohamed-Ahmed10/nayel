@@ -37,7 +37,7 @@
                     <button class="bg-transparent border-0 dropdown-toggle w-100" data-bs-toggle="dropdown">
                         {{'gulfDesigns' | translate}}
                     </button>
-                    <ul class="dropdown-menu text-center"></ul>
+                    <!-- <ul class="dropdown-menu text-center"></ul> -->
                 </div>
                 <div class="dropdown-center">
                     <button class="bg-transparent border-0 dropdown-toggle w-100" data-bs-toggle="dropdown">
@@ -51,7 +51,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="card p-3 my-3">
+            <!-- <div class="card p-3 my-3">
                 <h2 class="text-center">{{'priceRange' | translate}}</h2>
                 <label class="text-center">
                     <input type="checkbox" checked>
@@ -69,7 +69,7 @@
                     <input type="checkbox">
                     $20.00 - $50.00
                 </label>
-            </div>
+            </div> -->
         </div>
         <div class="col-lg-9 col-12">
             <h2>{{"productsTitle" | translate}} {{currentPath | translate}}</h2>
@@ -81,6 +81,9 @@
             </div>
             <h5 class="fw-bold">{{'showingNumber' | translate}}</h5>
             <p>{{'showingDesc' | translate}}</p>
+            @if (itemCategories().length > 0) {
+            @for (category of itemCategories(); track $index) {
+            <h2 class="text-center fw-bold text-bg-secondary my-3 p-2">{{category | uppercase}}</h2>
             <div class="row">
                 @for (product of products; track $index) {
                 <div class="col-md-4 col-12">
@@ -100,8 +103,29 @@
                     </div>
                 </div>
             </div>
+            }
+            }
+            @else {
+                <div class="row">
+                    @for (product of products; track $index) {
+                    <div class="col-md-4 col-12">
+                        <app-product-card [product]="product" />
+                    </div>
+                    }
+                    <div class="col-12">
+                        <div class="load-more">
+                            <p class="item-count">{{'showingNumber' | translate}}</p>
+                            <div class="separator">
+                                <div></div>
+                            </div>
+                            <button class="load-more-btn">
+                                {{'loadMore' | translate}}
+                                <img src="icons/arrow_right_light.png" alt="icon">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
         </div>
     </div>
-
-
 </div>
