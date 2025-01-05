@@ -2,7 +2,7 @@
     <div class="product my-3">
         <div class="position-relative">
 
-            <img [src]="'homepage/products/'+product.image + '.png'" class="product_image" alt="product image">
+            <img [src]="'homepage/products/'+product.image " class="product_image" alt="product image">
             @if (product.saleAmount === undefined || product.saleAmount > 0 ) {
             <div class="cart_icon position-absolute">
                 <img src="icons/cart2.png" alt="Icon">

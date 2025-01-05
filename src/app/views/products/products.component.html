@@ -3,54 +3,63 @@
     <div class="row">
         <div class="col-lg-3 col-12 filters">
             <div class="filter-panel card p-3 mb-3">
-                <h2 class="text-center">{{'categories' | translate}}</h2>
-                <div class="dropdown-center">
+                <h2 class="text-center">{{ 'categories' | translate }}</h2>
+
+                <!-- Fabric Dropdown -->
+                <div *ngIf="showFabricDropdown()" class="dropdown-center">
                     <button class="bg-transparent border-0 dropdown-toggle w-100" data-bs-toggle="dropdown">
-                        {{'fabric' | translate}}
+                        {{ 'fabric' | translate }}
                     </button>
                     <ul class="dropdown-menu text-center">
-                        <li class="dropdown-item" value="cotton">{{'cotton' | translate}}</li>
-                        <li class="dropdown-item" value="silk">{{'silk' | translate}}</li>
-                        <li class="dropdown-item" value="others">{{'others' | translate}}</li>
+                        <li *ngFor="let category of fabricCategories" (click)="filterByCategory(category)"
+                            class="dropdown-item" [value]="category">
+                            {{ category | translate }}
+                        </li>
                     </ul>
                 </div>
-                <div class="dropdown-center">
+
+                <!-- Makhawer Dropdown -->
+                <div *ngIf="showMakhawerDropdown()" class="dropdown-center">
                     <button class="bg-transparent border-0 dropdown-toggle w-100" data-bs-toggle="dropdown">
-                        {{'makhawer' | translate}}
+                        {{ 'makhawer' | translate }}
                     </button>
                     <ul class="dropdown-menu text-center">
-                        <li class="dropdown-item" value="women">{{'women' | translate}}</li>
-                        <li class="dropdown-item" value="girls">{{'girls' | translate}}</li>
-                        <li class="dropdown-item" value="kids">{{'kids' | translate}}</li>
+                        <li *ngFor="let category of makhawerCategories" (click)="filterByCategory(category)"
+                            class="dropdown-item" [value]="category">
+                            {{ category | translate }}
+                        </li>
                     </ul>
                 </div>
-                <div class="dropdown-center">
+
+                <!-- Abaya Dropdown -->
+                <div *ngIf="showAbayaDropdown()" class="dropdown-center">
                     <button class="bg-transparent border-0 dropdown-toggle w-100" data-bs-toggle="dropdown">
-                        {{'abaya' | translate}}
+                        {{ 'abaya' | translate }}
                     </button>
                     <ul class="dropdown-menu text-center">
-                        <li class="dropdown-item" value="abaya">{{'abaya' | translate}}</li>
-                        <li class="dropdown-item" value="scarves">{{'scarves' | translate}}</li>
+                        <li *ngFor="let category of abayaCategories" (click)="filterByCategory(category)"
+                            class="dropdown-item" [value]="category">
+                            {{ category | translate }}
+                        </li>
                     </ul>
                 </div>
-                <div class="dropdown-center">
+
+                <!-- International Designs Dropdown -->
+                <div *ngIf="showInternationalDesignsDropdown()" class="dropdown-center">
                     <button class="bg-transparent border-0 dropdown-toggle w-100" data-bs-toggle="dropdown">
-                        {{'gulfDesigns' | translate}}
-                    </button>
-                    <!-- <ul class="dropdown-menu text-center"></ul> -->
-                </div>
-                <div class="dropdown-center">
-                    <button class="bg-transparent border-0 dropdown-toggle w-100" data-bs-toggle="dropdown">
-                        {{'internationalDesigns' | translate}}
+                        {{ 'internationalDesigns' | translate }}
                     </button>
                     <ul class="dropdown-menu text-center">
-                        <li class="dropdown-item" value="western">{{'western' | translate}}</li>
-                        <li class="dropdown-item" value="eastern">{{'eastern' | translate}}</li>
-                        <li class="dropdown-item" value="asian">{{'asian' | translate}}</li>
-                        <li class="dropdown-item" value="morocco">{{'morocco' | translate}}</li>
+                        <li *ngFor="let category of internationalDesignsCategories" (click)="filterByCategory(category)"
+                            class="dropdown-item" [value]="category">
+                            {{ category | translate }}
+                        </li>
                     </ul>
                 </div>
+
             </div>
+
+
             <!-- <div class="card p-3 my-3">
                 <h2 class="text-center">{{'priceRange' | translate}}</h2>
                 <label class="text-center">
@@ -72,7 +81,7 @@
             </div> -->
         </div>
         <div class="col-lg-9 col-12">
-            <h2>{{"productsTitle" | translate}} {{currentPath | translate}}</h2>
+            <h2>{{"productsTitle" | translate}} {{currentPath() | translate}}</h2>
             <div class="search-bar">
                 <input type="text" placeholder="{{'searchAnItem' | translate}}">
                 <div class="image_container">
@@ -83,11 +92,14 @@
             <p>{{'showingDesc' | translate}}</p>
             @if (itemCategories().length > 0) {
             @for (category of itemCategories(); track $index) {
-            <h2 class="text-center fw-bold text-bg-secondary my-3 p-2">{{category | uppercase}}</h2>
+            @if (!selectedCategory() || category === selectedCategory()) {
+
+            <h2 class="text-center fw-bold text-bg-secondary my-3 p-2" [id]="itemCategories()[$index]">{{category |
+                uppercase}}</h2>
             <div class="row">
-                @for (product of products; track $index) {
+                @for (product of filteredProducts(); track $index) {
                 <div class="col-md-4 col-12">
-                    <app-product-card [product]="product" />
+                    <app-product-card [product]="product"></app-product-card>
                 </div>
                 }
                 <div class="col-12">
@@ -105,26 +117,27 @@
             </div>
             }
             }
+            }
             @else {
-                <div class="row">
-                    @for (product of products; track $index) {
-                    <div class="col-md-4 col-12">
-                        <app-product-card [product]="product" />
-                    </div>
-                    }
-                    <div class="col-12">
-                        <div class="load-more">
-                            <p class="item-count">{{'showingNumber' | translate}}</p>
-                            <div class="separator">
-                                <div></div>
-                            </div>
-                            <button class="load-more-btn">
-                                {{'loadMore' | translate}}
-                                <img src="icons/arrow_right_light.png" alt="icon">
-                            </button>
+            <div class="row">
+                @for (product of filteredProducts(); track $index) {
+                <div class="col-md-4 col-12">
+                    <app-product-card [product]="product"></app-product-card>
+                </div>
+                }
+                <div class="col-12">
+                    <div class="load-more">
+                        <p class="item-count">{{'showingNumber' | translate}}</p>
+                        <div class="separator">
+                            <div></div>
                         </div>
+                        <button class="load-more-btn">
+                            {{'loadMore' | translate}}
+                            <img src="icons/arrow_right_light.png" alt="icon">
+                        </button>
                     </div>
                 </div>
+            </div>
             }
         </div>
     </div>

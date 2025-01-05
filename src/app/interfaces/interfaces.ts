@@ -5,5 +5,14 @@ export interface Product {
     name: string,
     arName: string,
     priceBefore?: number,
-    priceAfter?: number
+    priceAfter?: number,
+    category?: string
+}
+
+export interface Products {
+    abaya?: Product[];
+    fabric?: Product[];
+    gulfDesigns?: Product[];
+    internationalDesigns?: Product[];
+    makhawer?: Product[];
 }
